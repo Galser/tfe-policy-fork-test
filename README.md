@@ -69,5 +69,6 @@ TRUE - tfe-policy-fork-test/fake_hour.sentinel:2:1 - Rule "main"
 ```
 : now this commit is visible - https://github.com/Galser/tfe-policy-fork-test/commit/e00ac9e7805bf1931f461055a0e6f6286ab57fd9
 
-
+14. Created new branch and PR that should fail run, merged it.. no reaction in TFE, this run https://tfe-pm-3.guselietov.com/app/acme/workspaces/tfe-minimal/runs/run-61EaV6JTCtSrSHou
+- should FAIL
 
