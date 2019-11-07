@@ -12,7 +12,7 @@ TFE Sentinel Policy fork test
 6. Make commit
 7. Check whether the commit is visible - e.g. policy got update in TFE
 
-# Tesr journal
+# Test journal
 1. Create base policy
 2. Attached GitHub to tfe-pm-3 instance , organization "acme"
 3. Created **main** policyt set , pointing right now to : 
@@ -47,6 +47,27 @@ this one : https://github.com/Galser/tfe-policy-fork-test/commit/d3391999d215b29
 Previous run : https://tfe-pm-3.guselietov.com/app/acme/workspaces/tfe-minimal/runs/run-YjDH5Q3bRMfCteAc
 
 11.  New run :  FAILED! still same commit displayed in dashboard : `d339199`
+
+12. Merged everything, new run - FAILED
+12. Pointed to defaultr branch - run - FAILED  ( 11:07)
+13. Created new branch, NO chnagesto code, just repointed branch in Policy Dashbvoard... hooray - success https://tfe-pm-3.guselietov.com/app/acme/workspaces/tfe-minimal/runs/run-oaSB8t8g6asL8wLi 
+```terraform
+Sentinel Result: true
+
+This result means that Sentinel policies returned true and the protected
+behavior is allowed by Sentinel policies.
+
+1 policies evaluated.
+
+## Policy 1: tfe-policy-fork-test/fake_hour.sentinel (hard-mandatory)
+
+Result: true
+
+TRUE - tfe-policy-fork-test/fake_hour.sentinel:2:1 - Rule "main"
+  TRUE - tfe-policy-fork-test/fake_hour.sentinel:2:15 - hour >= 0
+  TRUE - tfe-policy-fork-test/fake_hour.sentinel:2:29 - hour < 12
+```
+: now this commit is visible - https://github.com/Galser/tfe-policy-fork-test/commit/e00ac9e7805bf1931f461055a0e6f6286ab57fd9
 
 
 
