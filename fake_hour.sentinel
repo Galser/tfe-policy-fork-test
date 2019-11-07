@@ -1,2 +1,2 @@
-hour = 11
+hour = 115
 main = rule { hour >= 0 and hour < 12 }
