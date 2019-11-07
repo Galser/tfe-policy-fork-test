@@ -1,3 +1,3 @@
-policy "fake_hour_enforced" {
+policy "fake_hour" {
     enforcement_level = "hard-mandatory"
 }
